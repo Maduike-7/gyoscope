@@ -1,0 +1,63 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    background: linear-gradient(45deg, #ffffff, #ff6ec4, #7873f5, #ff9a8b, #ff6ec4, #7873f5, #ff9a8b);
+    background-size: 600% 600%;
+    animation: gradientBackground 16s ease infinite;
+    transition: background 0.5s ease;
+}
+
+@keyframes gradientBackground {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+#icon {
+    color: #FFD700;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+
+#device-info {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    cursor: pointer;
+    animation: fadeInOut 2s infinite;
+}
+
+#detailed-info {
+    display: none;
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 16px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+@keyframes fadeInOut {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translate(-50%, -50%) translateY(0); }
+    50% { transform: translate(-50%, -50%) translateY(-20px); }
+}
+
+@keyframes hover {
+    0%, 100% { transform: translate(-50%, -50%) scale(1); }
+    50% { transform: translate(-50%, -50%) scale(1.1); }
+}
