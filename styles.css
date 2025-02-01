@@ -1,10 +1,10 @@
 body {
     margin: 0;
     overflow: hidden;
-    background: linear-gradient(45deg, #ffffff, #ff6ec4, #7873f5, #ff9a8b, #ff6ec4, #7873f5, #ff9a8b);
-    background-size: 600% 600%;
-    animation: gradientBackground 16s ease infinite;
-    transition: background 0.5s ease;
+    background: url('path/to/water-texture.jpg') no-repeat center center fixed;
+    background-size: cover;
+    transition: background-position 0.1s ease-out, background-color 10s ease-out; /* Very slow transition for background color */
+    color: #ffffff; /* Set text color to white for better contrast */
 }
 
 @keyframes gradientBackground {
@@ -14,7 +14,7 @@ body {
 }
 
 #icon {
-    color: #FFD700;
+    color: #00BFFF; /* Deep Sky Blue color for the icon */
     position: absolute;
     top: 50%;
     left: 50%;
@@ -27,7 +27,7 @@ body {
     bottom: 10px;
     left: 50%;
     transform: translateX(-50%);
-    color: white;
+    color: #00BFFF; /* Deep Sky Blue color for the text */
     font-size: 20px;
     text-align: center;
     cursor: pointer;
@@ -40,7 +40,7 @@ body {
     top: 10px;
     left: 50%;
     transform: translateX(-50%);
-    color: white;
+    color: #00BFFF; /* Deep Sky Blue color for the text */
     font-size: 16px;
     text-align: center;
     opacity: 0;
